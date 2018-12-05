@@ -12,14 +12,8 @@ validTime(time) = false.
 */
 
 function validTime(time) {
-  if (/\d{2}:\d{2}/.test(time)) {
-    time = time.split(":");
-    if ((time[0] >= 0 && time[0] <= 23) && (time[1] >= 0 && time[1] <= 59)) {
-      return true;
-    }
-    return false;
-  }
-  return false;
+  time = time.split(":");
+  return time[0] < 24 && time[1] < 60 ? true : false;
 }
 
 
