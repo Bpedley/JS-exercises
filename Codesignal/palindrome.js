@@ -8,14 +8,7 @@ backward, ignoring punctuation, case, and spacing.
 function palindrome(str) {
   let regex = /[a-z0-9]+/ig;
   let matches = str.match(regex).map(i => i.toLowerCase());
-  return matches
-         .join("") == matches
-         .map(word => word
-         .split("")
-         .reverse()
-         .join(""))
-         .reverse()
-         .join("");
+  return matches.join("") == matches.map(word => word.split("").reverse().join("")).reverse().join("");
 }
 
 
