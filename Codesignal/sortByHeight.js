@@ -10,19 +10,13 @@ sortByHeight(a) = [-1, 150, 160, 170, -1, -1, 180, 190].
 */
 
 function sortByHeight(a) {
-  if (a.every(i => i == -1)) {
-    return a;
-  } else if (a.every(i => i != -1)) {
-    return a.sort((a, b) => a - b);
-  } else {
-    let arr = a.filter(i => i != -1).sort((a, b) => a - b);
-    for (let i = 0; i < a.length; i++) {
-      if (a[i] == -1) {
-        arr.splice(i, 0, -1);
-      }
+  let arr = a.slice().filter(i => i !== -1).sort((a, b) => a - b);
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] == -1) {
+      arr.splice(i, 0, -1);
     }
-    return arr;
   }
+  return arr;
 }
 
 

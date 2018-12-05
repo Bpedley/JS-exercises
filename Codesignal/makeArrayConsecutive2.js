@@ -15,9 +15,9 @@ Ratiorg needs statues of sizes 4, 5 and 7.
 
 function makeArrayConsecutive2(statues) {
   let count = 0;
-  statues = statues.sort((a, b) => a - b);
+  statues.sort((a, b) => a - b);
   for (let i = statues[0]; i < statues.slice(-1); i++) {
-    if (!statues.includes(i)) {
+    if (statues.indexOf(i) < 0) {
       count++;
     }
   }

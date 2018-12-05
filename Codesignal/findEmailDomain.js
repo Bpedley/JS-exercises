@@ -10,6 +10,7 @@ the output should be findEmailDomain(address) = "example.org".
 */
 
 function findEmailDomain(address) {
+  // return address.match(/\@\w+\.?\w+$/)[0].slice(1);
   return address.split("@").slice(-1)[0];
 }
 
