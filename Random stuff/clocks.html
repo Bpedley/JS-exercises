@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Часики</title>
+  <meta charset="utf-8">
+  <style>
+    .hour {
+      color: green
+    }
+
+    .min {
+      color: blue
+    }
+
+    .sec {
+      color: red
+    }
+  </style>
+</head>
+<body>
+  <div id="clock" class="clock">
+    <span class="hour">00</span>:<span class="min">00</span>:<span class="sec">00</span>
+  </div>
+
+  <script>
+    function Clock(options) {
+      let elem = options.elem;
+      
+      let timer;
+      
+      function render() {
+        let date = new Date();
+        
+        let hours = date.getHours();
+        if (hours < 10) {
+          hours = `0${hours}`;
+        }
+        elem.querySelector(".hour").innerHTML = hours;
+        
+        let minutes = date.getMinutes();
+        if (minutes < 10) {
+          minutes = `0${minutes}`;
+        }
+        elem.querySelector(".min").innerHTML = minutes;
+        
+        let seconds = date.getSeconds();
+        if (seconds < 10) {
+          seconds = `0${seconds}`;
+        }
+        elem.querySelector(".sec").innerHTML = seconds;
+      }
+      
+      this.stop = function() {
+        clearInterval(timer);
+      }
+      
+      this.start = function() {
+        render();
+        timer = setInterval(render, 1000);
+      }
+    }
+    
+    
+    let pageClock = new Clock({
+      elem: document.getElementById('clock')
+    });
+  </script>
+
+  <input type="button" onclick="pageClock.start()" value="Старт">
+  <input type="button" onclick="pageClock.stop()" value="Стоп">
+  <input type="button" onclick="alert('Часы должны останавливаться во время alert,\nи продолжать корректно работать после нажатия на ОК')" value="alert для проверки корректного возобновления">
+
+</body>
+</html>
