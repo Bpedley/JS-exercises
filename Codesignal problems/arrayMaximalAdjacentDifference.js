@@ -10,11 +10,13 @@ arrayMaximalAdjacentDifference(inputArray) = 3.
 
 function arrayMaximalAdjacentDifference(inputArray) {
   let max = 0;
+  let current;
+  
   for (let i = 0; i < inputArray.length - 1; i++) {
-    if (Math.abs(inputArray[i]-inputArray[i+1]) > max) {
-      max = Math.abs(inputArray[i]-inputArray[i+1]);
-    }
+    current = Math.abs(inputArray[i]-inputArray[i+1]);
+    if (current > max) max = current;
   }
+
   return max;
 }
 
