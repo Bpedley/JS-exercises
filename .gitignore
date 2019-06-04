@@ -2,6 +2,7 @@
 
 # dependencies
 /Webpack/node_modules
+/reduxcounter/node_modules
 /my-app/node_modules
 /my-app/.pnp
 .pnp.js
