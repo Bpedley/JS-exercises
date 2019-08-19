@@ -7,3 +7,4 @@
 * [FreeCodeCamp Intermediate Algorithms](https://github.com/Bpedley/JS-exercises/tree/master/FreeCodeCamp%20Intermediate%20Algorithms) - решение задач FreeCodeCamp сертификата по JavaScript
 * [Codesignal problems](https://github.com/Bpedley/JS-exercises/tree/master/Codesignal%20problems) - решение задач с сайта codesignal.com ([Профиль](https://app.codesignal.com/profile/bpedley))
 * [JS & DOM](https://github.com/Bpedley/JS-exercises/tree/master/JS%20%26%20DOM) - решение задач с сайта learn.javascript.ru и проекты с сайта linkedin learning
+* [reduxcounter](https://github.com/Bpedley/JS-exercises/tree/master/reduxcounter) - Basic redux App
